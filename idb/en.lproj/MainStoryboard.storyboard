@@ -1,21 +1,132 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce tu nombre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tl0-Yv-iwD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="Zi9-wz-Ewj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa tu apellido" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNZ-KG-OPA">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liw-Bj-A6Z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="qay-mO-W3w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Agregar">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="agrega:" destination="2" eventType="touchUpInside" id="uyq-Rw-lGV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INq-sn-GrW">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Eliminar">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXS-YF-AF9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="UtD-Vu-trR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Listar">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lista:" destination="2" eventType="touchUpInside" id="B3j-Fa-H9H"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="299-BV-yLx">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="kBG-qm-GY7"/>
+                                </constraints>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa tu grupo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0M-hx-ohi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="1zT-Ln-wlD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vnx-cs-gK3">
+                                <items>
+                                    <navigationItem title="Amig@s" id="gYH-ne-6gU"/>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hnk-Bl-H9X">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vnx-cs-gK3" firstAttribute="top" secondItem="3" secondAttribute="top" constant="-7" id="04M-sl-Bsv"/>
+                            <constraint firstItem="Vnx-cs-gK3" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="1tw-bx-Rwk"/>
+                            <constraint firstItem="liw-Bj-A6Z" firstAttribute="top" secondItem="3" secondAttribute="top" constant="180" id="31h-Td-qHe"/>
+                            <constraint firstItem="liw-Bj-A6Z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5A0-r0-iAf"/>
+                            <constraint firstItem="INq-sn-GrW" firstAttribute="bottom" secondItem="liw-Bj-A6Z" secondAttribute="bottom" type="default" id="6Fz-NP-rvJ"/>
+                            <constraint firstItem="INq-sn-GrW" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="124" id="7mX-pt-ZSi"/>
+                            <constraint firstItem="tNZ-KG-OPA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9pI-o7-deC"/>
+                            <constraint firstItem="Vnx-cs-gK3" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Blg-wv-fz7"/>
+                            <constraint firstAttribute="trailing" secondItem="299-BV-yLx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HW3-aV-7iK"/>
+                            <constraint firstAttribute="trailing" secondItem="SXS-YF-AF9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Jk2-5S-eZQ"/>
+                            <constraint firstItem="Hnk-Bl-H9X" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="K87-4P-bUJ"/>
+                            <constraint firstItem="Hnk-Bl-H9X" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="KQP-Ru-n6d"/>
+                            <constraint firstItem="k0M-hx-ohi" firstAttribute="leading" secondItem="SXS-YF-AF9" secondAttribute="leading" type="default" id="L5a-6O-TzJ"/>
+                            <constraint firstItem="liw-Bj-A6Z" firstAttribute="top" secondItem="INq-sn-GrW" secondAttribute="top" type="default" id="Nlx-hc-Eer"/>
+                            <constraint firstAttribute="trailing" secondItem="k0M-hx-ohi" secondAttribute="trailing" constant="33" id="UVY-96-ZAU"/>
+                            <constraint firstItem="k0M-hx-ohi" firstAttribute="baseline" secondItem="tNZ-KG-OPA" secondAttribute="baseline" type="default" id="Vcr-iv-UXJ"/>
+                            <constraint firstItem="tNZ-KG-OPA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="92" id="WFX-NR-7AT"/>
+                            <constraint firstItem="Hnk-Bl-H9X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="129" id="ZiQ-A2-9BJ"/>
+                            <constraint firstItem="SXS-YF-AF9" firstAttribute="top" secondItem="INq-sn-GrW" secondAttribute="top" type="default" id="a6w-ID-Qcq"/>
+                            <constraint firstItem="Tl0-Yv-iwD" firstAttribute="trailing" secondItem="tNZ-KG-OPA" secondAttribute="trailing" type="default" id="aek-ha-A7U"/>
+                            <constraint firstItem="SXS-YF-AF9" firstAttribute="baseline" secondItem="INq-sn-GrW" secondAttribute="baseline" type="default" id="b93-9X-azP"/>
+                            <constraint firstItem="Tl0-Yv-iwD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fvK-M4-Yn1"/>
+                            <constraint firstItem="299-BV-yLx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ipI-yM-N7o"/>
+                            <constraint firstItem="Tl0-Yv-iwD" firstAttribute="top" secondItem="3" secondAttribute="top" constant="48" id="nJl-9y-Rf2"/>
+                            <constraint firstItem="299-BV-yLx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="230" id="pQN-nT-KbN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barraBuscar" destination="Hnk-Bl-H9X" id="Fum-0D-0hk"/>
+                        <outlet property="uiapellidos" destination="tNZ-KG-OPA" id="wkT-H3-gys"/>
+                        <outlet property="uigrupo" destination="k0M-hx-ohi" id="306-0T-c5r"/>
+                        <outlet property="uilista" destination="299-BV-yLx" id="x0e-vc-Nl1"/>
+                        <outlet property="uinombre" destination="Tl0-Yv-iwD" id="njy-cb-hd2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-166" y="-2"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sqlite3.h"
+#import "persona.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *uinombre;
+@property (weak, nonatomic) IBOutlet UITextField *uiapellidos;
+@property (weak, nonatomic) IBOutlet UITextField *uigrupo;
+@property (weak, nonatomic) IBOutlet UISearchBar *barraBuscar;
+
+@property (weak, nonatomic) IBOutlet UITableView *uilista;
+
+- (IBAction)agrega:(id)sender;
+- (IBAction)elimina:(id)sender;
+- (IBAction)lista:(id)sender;
+
 
 @end
